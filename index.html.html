@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張岑安 Vivian | 個人線上履歷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        iceBlue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc7fb',
+                            400: '#36a9f7',
+                            500: '#0c8de4',
+                            600: '#0270c1',
+                            700: '#03599d',
+                            800: '#074c81',
+                            900: '#0c406e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-padding {
+                padding: 0 !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .shadow-xl, .shadow-lg, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+                border: 1px solid #e5e7eb;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-iceBlue-50 via-sky-50 to-blue-50 text-slate-700 antialiased min-h-screen">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-iceBlue-100 no-print transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo / Name -->
+                <a href="#home" class="flex items-center gap-2 group">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-iceBlue-400 to-iceBlue-600 text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+                        張
+                    </div>
+                    <span class="font-bold text-xl tracking-wide text-slate-800">張岑安 <span class="text-xs font-medium text-iceBlue-600 bg-iceBlue-50 px-2 py-0.5 rounded-full border border-iceBlue-200">Vivian</span></span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                    <a href="#about" class="hover:text-iceBlue-600 transition-colors">關於我</a>
+                    <a href="#experience" class="hover:text-iceBlue-600 transition-colors">學歷與經歷</a>
+                    <a href="#skills" class="hover:text-iceBlue-600 transition-colors">優勢與專長</a>
+                    <a href="#preferences" class="hover:text-iceBlue-600 transition-colors">求職意向</a>
+                    <a href="#contact" class="hover:text-iceBlue-600 transition-colors">聯絡方式</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button onclick="window.print()" class="px-3.5 py-1.5 text-sm font-medium text-iceBlue-700 bg-iceBlue-100 hover:bg-iceBlue-200 rounded-lg transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-print"></i> 列印履歷
+                    </button>
+                    <a href="#contact" class="px-4 py-1.5 text-sm font-medium text-white bg-iceBlue-500 hover:bg-iceBlue-600 rounded-lg shadow-sm hover:shadow-md transition-all">
+                        立即聯繫
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-iceBlue-100 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-iceBlue-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-iceBlue-50 hover:text-iceBlue-600">關於我</a>
+            <a href="#experience" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-iceBlue-50 hover:text-iceBlue-600">學歷與經歷</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-iceBlue-50 hover:text-iceBlue-600">優勢與專長</a>
+            <a href="#preferences" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-iceBlue-50 hover:text-iceBlue-600">求職意向</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-iceBlue-50 hover:text-iceBlue-600">聯絡方式</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <button onclick="window.print()" class="w-full py-2 text-center text-sm font-medium text-iceBlue-700 bg-iceBlue-100 hover:bg-iceBlue-200 rounded-lg">
+                    <i class="fa-solid fa-print mr-1"></i> 列印 / 列印 PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 lg:pt-24 pb-16">
+        
+        <section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+            <div class="bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-xl border border-white/60 relative overflow-hidden">
+                <div class="absolute -right-12 -top-12 w-64 h-64 bg-iceBlue-200/40 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-12 -bottom-12 w-64 h-64 bg-sky-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <!-- Profile Info -->
+                    <div class="flex-1 text-center md:text-left space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-iceBlue-100 text-iceBlue-700 text-sm font-medium">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                            求職狀態：待業中 (錄取後隨時可上班)
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-800 tracking-tight">
+                            張岑安 <span class="text-iceBlue-500 font-light text-2xl sm:text-3xl lg:text-4xl">Vivian</span>
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-slate-600 font-medium">
+                            東海大學 國際經營與貿易學系 (在學中)
+                        </p>
+
+                        <!-- Tagline / Quote -->
+                        <div class="py-2">
+                            <blockquote class="text-lg italic text-iceBlue-700 bg-iceBlue-50/80 border-l-4 border-iceBlue-400 p-3 rounded-r-lg inline-block">
+                                「努力學習，盡力而為」
+                            </blockquote>
+                        </div>
+
+                        <p class="text-slate-600 leading-relaxed max-w-2xl">
+                            個性開朗活潑愛笑，遇到事情會冷靜沉著、努力想辦法，並保持積極正面的態度去面對與解決問題。具備飲料店與餐廳近兩年服務經驗。
+                        </p>
+
+                        <!-- Fast Contacts Grid -->
+                        <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start text-sm text-slate-600">
+                            <a href="tel:0976214982" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-iceBlue-100 hover:text-iceBlue-700 transition-colors">
+                                <i class="fa-solid fa-phone text-iceBlue-500"></i>
+                                <span>0976-214-982</span>
+                            </a>
+                            <a href="mailto:cenanzhang@gmail.com" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-iceBlue-100 hover:text-iceBlue-700 transition-colors">
+                                <i class="fa-solid fa-envelope text-iceBlue-500"></i>
+                                <span>cenanzhang@gmail.com</span>
+                            </a>
+                            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100">
+                                <i class="fa-solid fa-location-dot text-iceBlue-500"></i>
+                                <span>台中市沙鹿區</span>
+                            </span>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="pt-4 flex flex-wrap items-center justify-center md:justify-start gap-4">
+                            <a href="#contact" class="px-6 py-3 rounded-xl bg-iceBlue-500 hover:bg-iceBlue-600 text-white font-medium shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> 聯絡我
+                            </a>
+                            <a href="#experience" class="px-6 py-3 rounded-xl bg-white border border-iceBlue-200 hover:bg-iceBlue-50 text-slate-700 font-medium transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-briefcase text-iceBlue-500"></i> 查看工作經驗
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Avatar Card / Quick Stats -->
+                    <div class="w-full sm:w-72 md:w-80 flex-shrink-0">
+                        <div class="bg-gradient-to-b from-iceBlue-100 to-white p-6 rounded-2xl border border-iceBlue-200 shadow-sm text-center relative">
+                            <!-- User Avatar Placeholder SVG -->
+                            <div class="w-32 h-32 mx-auto rounded-full bg-iceBlue-200 border-4 border-white shadow-inner flex items-center justify-center overflow-hidden mb-4">
+                                <i class="fa-solid fa-user-large text-5xl text-iceBlue-400"></i>
+                            </div>
+
+                            <h3 class="font-bold text-slate-800 text-lg">張岑安 Vivian</h3>
+                            <p class="text-xs text-slate-500 mb-4">21歲 ｜ 女 ｜ 日間部學生</p>
+
+                            <hr class="border-iceBlue-100 my-3">
+
+                            <div class="grid grid-cols-2 gap-2 text-left text-xs">
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                                    <span class="text-slate-400 block">希望地點</span>
+                                    <span class="font-semibold text-slate-700">台中沙鹿區</span>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                                    <span class="text-slate-400 block">工作性質</span>
+                                    <span class="font-semibold text-slate-700">兼職 (日班)</span>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                                    <span class="text-slate-400 block">服務總年資</span>
+                                    <span class="font-semibold text-slate-700">1 ~ 2 年</span>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-100">
+                                    <span class="text-slate-400 block">交通工具</span>
+                                    <span class="font-semibold text-slate-700">普通重型機車</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white/90 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-iceBlue-100 text-iceBlue-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">關於我</h2>
+                        <p class="text-xs text-slate-400">About Vivian</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Left: Personality Card -->
+                    <div class="md:col-span-2 space-y-4">
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            您好！我是張岑安，英文名字是 Vivian。目前就讀於<strong class="text-slate-800">東海大學國際經營與貿易學系</strong>日間部。
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            我是一個<strong class="text-iceBlue-700">個性開朗、活潑且愛笑</strong>的人，在與人互動時總能保持親切與笑容。在工作場合中，我兼具冷靜沉著與認真努力的態度，面對任何突發狀況或未知的挑戰，我都會「努力學習，盡力而為」，積極尋找解決方案。
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            過去曾在餐廳（府壽司）與飲料店擔任工讀服務生，累積了將近兩年的餐飲門市服務經驗。從點餐接待、環境維護到團隊溝通配合，都奠定了良好的顧客服務與現場應對能力。
+                        </p>
+
+                        <!-- Characteristic Badges -->
+                        <div class="pt-2 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-800"><i class="fa-regular fa-face-smile mr-1"></i> 開朗活潑愛笑</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800"><i class="fa-solid fa-brain mr-1"></i> 遇到事情冷靜應對</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800"><i class="fa-solid fa-seedling mr-1"></i> 正面學習態度</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800"><i class="fa-solid fa-handshake mr-1"></i> 團隊合作配合度高</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Basic Info Summary Card -->
+                    <div class="bg-iceBlue-50/50 rounded-xl p-5 border border-iceBlue-100 space-y-3">
+                        <h3 class="font-semibold text-slate-800 border-b border-iceBlue-200 pb-2 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info text-iceBlue-500"></i> 個人基本資料
+                        </h3>
+                        <ul class="space-y-2.5 text-sm text-slate-600">
+                            <li class="flex justify-between">
+                                <span class="text-slate-400">英文姓名：</span>
+                                <span class="font-medium text-slate-700">Vivian</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-slate-400">年齡 / 性別：</span>
+                                <span class="font-medium text-slate-700">21 歲 / 女性</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-slate-400">就業狀態：</span>
+                                <span class="font-medium text-green-600">待業中 (尋找兼職)</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-slate-400">持有駕照：</span>
+                                <span class="font-medium text-slate-700 text-right">普通重機、普通小型車</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-slate-400">主要代步：</span>
+                                <span class="font-medium text-slate-700">普通重型機車</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-slate-400">聯絡方式：</span>
+                                <span class="font-medium text-slate-700">手機聯絡為主</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white/90 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-xl bg-iceBlue-100 text-iceBlue-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">學歷與工作經歷</h2>
+                        <p class="text-xs text-slate-400">Education & Work Experience</p>
+                    </div>
+                </div>
+
+                <div class="relative border-l-2 border-iceBlue-200 ml-3 sm:ml-6 space-y-8">
+                    
+                    <!-- Item 1: University Education -->
+                    <div class="relative pl-6 sm:pl-8 group">
+                        <!-- Bullet point -->
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-iceBlue-500 group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="bg-iceBlue-50/40 rounded-xl p-5 border border-iceBlue-100 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block px-2.5 py-0.5 text-xs font-semibold text-iceBlue-700 bg-iceBlue-100 rounded mb-1">學歷</span>
+                                    <h3 class="text-lg font-bold text-slate-800">東海大学</h3>
+                                    <p class="text-iceBlue-600 font-medium">國際經營與貿易學系 ｜ 日間部在學中</p>
+                                </div>
+                                <span class="text-xs font-medium text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
+                                    2023 / 09 – 2027 / 06 (預計)
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-2">
+                                專攻國際貿易、商業管理與跨文化溝通能力。在學期間培養出良好的時間規劃能力，兼顧學業與兼職工作。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Fu Sushi Work Experience -->
+                    <div class="relative pl-6 sm:pl-8 group">
+                        <!-- Bullet point -->
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-iceBlue-500 group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="bg-iceBlue-50/40 rounded-xl p-5 border border-iceBlue-100 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block px-2.5 py-0.5 text-xs font-semibold text-emerald-700 bg-emerald-100 rounded mb-1">工作經歷 · 兼職工讀</span>
+                                    <h3 class="text-lg font-bold text-slate-800">府壽司 (1~30人規模)</h3>
+                                    <p class="text-iceBlue-600 font-medium">餐飲服務生</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-xs font-medium text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200 block sm:inline-block">
+                                        2024 / 06 – 2026 / 02
+                                    </span>
+                                    <span class="text-xs text-iceBlue-600 font-semibold block mt-1">資歷約 1 年 9 個月</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 mt-3">
+                                <li>負責顧客接待、菜單說明介紹、點餐與送餐服務。</li>
+                                <li>維持門市與用餐環境衛生整潔，協助開桌與收桌流程效率優化。</li>
+                                <li>收銀結帳作業與客訴初步冷靜處理，展現親切耐心的服務態度。</li>
+                                <li>與廚房及場外團隊緊密合作，保持出餐流暢性。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Beverage Shop Experience -->
+                    <div class="relative pl-6 sm:pl-8 group">
+                        <!-- Bullet point -->
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-iceBlue-300 group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="bg-slate-50 rounded-xl p-5 border border-slate-100 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                <div>
+                                    <span class="inline-block px-2.5 py-0.5 text-xs font-semibold text-slate-600 bg-slate-200 rounded mb-1">工作經歷 · 兼職工讀</span>
+                                    <h3 class="text-lg font-bold text-slate-800">飲料店門市</h3>
+                                    <p class="text-slate-600 font-medium">門市工讀生 / 服務員</p>
+                                </div>
+                            </div>
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 mt-2">
+                                <li>飲料調製與原料準備，注重品質與衛生。</li>
+                                <li>櫃檯點餐收銀，熟練操作 POS 機，並熱心向顧客推薦熱門產品。</li>
+                                <li>養成動作敏捷、細心處理產品細節的良好習慣。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white/90 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-iceBlue-100 text-iceBlue-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">個人優勢與專長</h2>
+                        <p class="text-xs text-slate-400">Skills & Advantages</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- Skill Card 1 -->
+                    <div class="bg-iceBlue-50/50 p-5 rounded-xl border border-iceBlue-100 hover:border-iceBlue-300 transition-colors">
+                        <div class="text-iceBlue-600 text-2xl mb-3">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-lg mb-2">親切服務與溝通</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            個性活潑開朗愛笑，擁有極佳的親和力。能快速與顧客建立友善互動，並耐心地解答顧客需求。
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 2 -->
+                    <div class="bg-iceBlue-50/50 p-5 rounded-xl border border-iceBlue-100 hover:border-iceBlue-300 transition-colors">
+                        <div class="text-iceBlue-600 text-2xl mb-3">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-lg mb-2">冷靜沉著與正面應對</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            面對突發問題或忙碌高壓環境，不慌張、冷靜思考，抱持「盡力而為、正面解決」的態度化解困難。
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="bg-iceBlue-50/50 p-5 rounded-xl border border-iceBlue-100 hover:border-iceBlue-300 transition-colors">
+                        <div class="text-iceBlue-600 text-2xl mb-3">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-lg mb-2">團隊合作與執行力</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            學習意願高、配合度極強。能迅速融入團隊分工，確實執行主管交代事項，維護良好工作氣氛。
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Licenses & Badges Grid -->
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                    <h3 class="text-base font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-id-card text-iceBlue-500"></i> 專業證照與駕照
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 text-sm font-medium">
+                            <i class="fa-solid fa-motorcycle text-iceBlue-500"></i>
+                            普通重型機車駕照
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 text-sm font-medium">
+                            <i class="fa-solid fa-car text-iceBlue-500"></i>
+                            普通小型車駕照
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="preferences" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white/90 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-iceBlue-100 text-iceBlue-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">求職意向與條件</h2>
+                        <p class="text-xs text-slate-400">Job Preferences</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-iceBlue-50 to-white p-4 rounded-xl border border-iceBlue-100 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-iceBlue-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-user-tag"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-iceBlue-600">希望職類</span>
+                                <div class="mt-1 flex flex-wrap gap-1.5">
+                                    <span class="px-2.5 py-1 bg-white text-slate-700 rounded-md text-xs font-medium border border-slate-200 shadow-sm">門市 / 店員 / 專櫃人員</span>
+                                    <span class="px-2.5 py-1 bg-white text-slate-700 rounded-md text-xs font-medium border border-slate-200 shadow-sm">牙醫助理</span>
+                                    <span class="px-2.5 py-1 bg-white text-slate-700 rounded-md text-xs font-medium border border-slate-200 shadow-sm">餐飲服務生</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-iceBlue-50 to-white p-4 rounded-xl border border-iceBlue-100 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-iceBlue-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-iceBlue-600">工作性質與時段</span>
+                                <p class="text-sm font-semibold text-slate-800 mt-0.5">兼職工作 ｜ 日班時段</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-iceBlue-50 to-white p-4 rounded-xl border border-iceBlue-100 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-iceBlue-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-iceBlue-600">希望工作地點</span>
+                                <p class="text-sm font-semibold text-slate-800 mt-0.5">台中市沙鹿區</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-iceBlue-50 to-white p-4 rounded-xl border border-iceBlue-100 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-iceBlue-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-iceBlue-600">可上班日與待遇</span>
+                                <p class="text-sm font-semibold text-slate-800 mt-0.5">錄取後隨時可上班 ｜ 待遇依公司規定</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-gradient-to-r from-iceBlue-600 to-blue-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+
+                <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6">
+                    <h2 class="text-3xl font-extrabold tracking-tight">誠摯期待與您合作！</h2>
+                    <p class="text-iceBlue-100 text-base sm:text-lg">
+                        若您對我的履歷有興趣，或有合適的兼職職缺，歡迎隨時透過電話或 Email 與我聯繫。
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <!-- Direct Phone -->
+                        <a href="tel:0976214982" class="w-full sm:w-auto px-6 py-3.5 bg-white text-iceBlue-700 hover:bg-iceBlue-50 rounded-xl font-bold shadow-md transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i>
+                            0976-214-982
+                        </a>
+
+                        <!-- Direct Email -->
+                        <a href="mailto:cenanzhang@gmail.com" class="w-full sm:w-auto px-6 py-3.5 bg-iceBlue-700 hover:bg-iceBlue-800 text-white border border-iceBlue-400/30 rounded-xl font-bold shadow-md transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            cenanzhang@gmail.com
+                        </a>
+                    </div>
+
+                    <p class="text-xs text-iceBlue-200 pt-4">
+                        通訊地址：台中市沙鹿區保成路 ｜ 最佳聯絡時段：隨時可撥打手機
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-iceBlue-100 py-6 no-print">
+        <div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-400 space-y-2">
+            <p>© 2026 張岑安 (Vivian). All rights reserved.</p>
+            <p>東海大學 國際經營與貿易學系 ｜ 個人求職簡歷網站</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add subtle shadow to header on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
